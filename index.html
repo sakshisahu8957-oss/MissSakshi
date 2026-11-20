@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Makeup Skin Hair Care – स्किन केयर, मेकअप और हेयर केयर के आसान टिप्स।">
+  <title>Makeup Skin Hair Care | Beauty & Care</title>
+  <style>
+    :root{--rose:#b85f72;--rose-dark:#8e4053;--cream:#fff9f6;--ink:#33262a;--muted:#76676b;--line:#f0dfe2}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:var(--ink);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:#f8e9eb;text-align:center;padding:8px 14px;font-size:13px;color:#70434d;letter-spacing:.3px}
+    header{position:sticky;top:0;z-index:20;background:#fffdfc;border-bottom:1px solid var(--line)}
+    .nav-wrap{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px}
+    .logo{width:43px;height:43px;border-radius:50%;display:grid;place-items:center;background:#f5dfe3;color:var(--rose-dark);font-size:22px}
+    .brand-name{font-family:Georgia,serif;font-size:20px;font-weight:bold;line-height:1.15;color:#56323c}
+    .brand-name small{display:block;font:10px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+    nav{display:flex;align-items:center;gap:27px;font-size:14px;color:#59484d}
+    nav a:hover{color:var(--rose)}
+    .nav-cta,.btn{display:inline-block;background:var(--rose);color:#fff;padding:11px 19px;border-radius:5px;font-weight:600;font-size:13px;transition:.2s}
+    .nav-cta:hover,.btn:hover{background:var(--rose-dark);transform:translateY(-1px)}
+    .menu-btn{display:none;border:0;background:none;font-size:25px;color:var(--rose-dark);cursor:pointer}
+    .hero{background:linear-gradient(90deg,rgba(40,22,27,.66),rgba(40,22,27,.12)),url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1900&q=85') center/cover;min-height:540px;display:flex;align-items:center}
+    .hero-content{max-width:1180px;width:100%;margin:auto;padding:70px 22px;color:white}
+    .eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#f7dce2;font-weight:bold}
+    h1{font:normal clamp(40px,6vw,68px)/1.12 Georgia,serif;max-width:650px;margin:17px 0}
+    .hero p{max-width:510px;color:#fff4f5;font-size:16px;margin-bottom:27px}
+    .btn.light{background:#fff;color:var(--rose-dark);margin-left:9px}
+    .section{max-width:1180px;margin:auto;padding:76px 22px}
+    .section-head{text-align:center;max-width:650px;margin:0 auto 38px}
+    .section-head span{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose);font-weight:bold}
+    h2{font:normal clamp(30px,4vw,42px)/1.2 Georgia,serif;color:#4a3038;margin:9px 0 12px}
+    .section-head p{color:var(--muted);font-size:14px}
+    .categories{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .category{position:relative;overflow:hidden;border-radius:9px;min-height:340px;background:#f8ecee}
+    .category img{width:100%;height:340px;object-fit:cover;display:block;transition:transform .5s}
+    .category:hover img{transform:scale(1.05)}
+    .category:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(28,15,19,.72))}
+    .category-info{position:absolute;z-index:1;bottom:22px;left:23px;color:#fff}
+    .category-info h3{font:27px Georgia,serif;margin-bottom:4px}
+    .category-info p{font-size:13px;color:#fff0f2}
+    .about{background:var(--cream)}
+    .about-inner{max-width:1180px;margin:auto;padding:75px 22px;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-image img{width:100%;height:420px;object-fit:cover;border-radius:8px}
+    .about-copy .eyebrow{color:var(--rose)}
+    .about-copy h2{margin:12px 0 18px}
+    .about-copy p{color:var(--muted);margin-bottom:17px;font-size:15px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .feature{border-left:2px solid #d99aa7;padding-left:12px}
+    .feature strong{display:block;color:#68404b;font:21px Georgia,serif}
+    .feature small{color:var(--muted);font-size:11px}
+    .tips{display:grid;grid-template-columns:repeat(3,1fr);gap:23px}
+    .tip{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:white}
+    .tip img{width:100%;height:210px;object-fit:cover;display:block}
+    .tip-body{padding:20px}
+    .tag{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--rose);font-weight:bold}
+    .tip h3{font:22px Georgia,serif;margin:8px 0;color:#4a3038}
+    .tip p{font-size:13px;color:var(--muted);margin-bottom:14px}
+    .read{font-size:13px;color:var(--rose-dark);font-weight:bold}
+    .newsletter{background:#f7e9eb;text-align:center;padding:62px 20px}
+    .newsletter p{color:var(--muted);font-size:14px;margin:8px auto 22px}
+    .subscribe{display:flex;max-width:440px;margin:auto;gap:8px}
+    .subscribe input{flex:1;min-width:0;padding:13px;border:1px solid #e5cbd1;border-radius:5px;font-size:14px;outline:none}
+    .subscribe button{border:0;cursor:pointer}
+    footer{background:#34272b;color:#f8e9ec;padding:45px 22px 20px}
+    .footer-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}
+    footer h3{font:23px Georgia,serif;margin-bottom:13px}
+    footer p,footer a{font-size:13px;color:#d7c4c9}
+    footer a{display:block;margin:7px 0}
+    footer a:hover{color:#fff}
+    .copyright{max-width:1180px;margin:30px auto 0;padding-top:17px;border-top:1px solid #57464c;text-align:center;color:#bca9ae;font-size:11px}
+    @media(max-width:760px){
+      .nav-wrap{padding:12px 17px}.menu-btn{display:block}
+      nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fffdfc;padding:18px 22px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line);gap:17px}
+      nav.open{display:flex}.nav-cta{display:none}
+      .hero{min-height:500px;background-position:58% center}
+      .hero-content{padding:60px 22px}.hero p{font-size:14px}
+      .categories,.tips{grid-template-columns:1fr;gap:18px}
+      .category,.category img{height:300px;min-height:300px}
+      .about-inner{grid-template-columns:1fr;gap:28px;padding:55px 22px}
+      .about-image img{height:300px}.features{gap:10px}
+      .footer-inner{grid-template-columns:1fr;gap:25px}
+      .section{padding:58px 18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">आपकी खूबसूरती, आपकी देखभाल — हर दिन थोड़ा और खास ✨</div>
+  <header>
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Makeup Skin Hair Care home">
+        <span class="logo">✿</span>
+        <span class="brand-name">Makeup Skin Hair Care<small>Beauty • Care • Confidence</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <a href="#home">Home</a><a href="#categories">Categories</a><a href="#about">About Us</a><a href="#tips">Beauty Tips</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#tips">Explore Tips</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Welcome to your beauty space</div>
+        <h1>Feel Beautiful.<br>Feel Confident.</h1>
+        <p>स्किन केयर, मेकअप और हेयर केयर की आसान जानकारी और उपयोगी टिप्स — ताकि आप अपनी देखभाल सही तरीके से कर सकें।</p>
+        <a class="btn" href="#categories">Explore Categories</a>
+        <a class="btn light" href="#about">Know More</a>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-head">
+        <span>Discover your routine</span>
+        <h2>Explore Our Beauty Categories</h2>
+        <p>अपनी जरूरत के अनुसार सही जानकारी चुनें और अपनी रोज़मर्रा की देखभाल को आसान बनाएं।</p>
+      </div>
+      <div class="categories">
+        <a class="category" href="#tips">
+          <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=900&q=85" alt="Skincare products">
+          <div class="category-info"><h3>Skin Care</h3><p>Healthy skin starts with good care</p></div>
+        </a>
+        <a class="category" href="#tips">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85" alt="Makeup and beauty">
+          <div class="category-info"><h3>Makeup</h3><p>Everyday looks to special occasions</p></div>
+        </a>
+        <a class="category" href="#tips">
+          <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=900&q=85" alt="Hair care">
+          <div class="category-info"><h3>Hair Care</h3><p>Simple care for your hair routine</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="about-image"><img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85" alt="Beauty and self care"></div>
+        <div class="about-copy">
+          <div class="eyebrow">A little about us</div>
+          <h2>Your Guide to Everyday Beauty & Care</h2>
+          <p><strong>Makeup Skin Hair Care</strong> में आपका स्वागत है! हमारा उद्देश्य स्किन केयर, मेकअप और हेयर केयर से जुड़ी आसान, उपयोगी और समझने योग्य जानकारी एक ही जगह उपलब्ध कराना है।</p>
+          <p>यहाँ आपको बेसिक रूटीन, मेकअप गाइड और बालों की देखभाल से जुड़े लेख मिलेंगे। हर व्यक्ति की त्वचा और बाल अलग होते हैं, इसलिए किसी भी नए प्रोडक्ट को इस्तेमाल करने से पहले पैच टेस्ट करना न भूलें।</p>
+          <a class="btn" href="#tips">Read Beauty Tips</a>
+          <div class="features">
+            <div class="feature"><strong>Skin</strong><small>Daily care guides</small></div>
+            <div class="feature"><strong>Makeup</strong><small>Step-by-step looks</small></div>
+            <div class="feature"><strong>Hair</strong><small>Care & styling tips</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tips">
+      <div class="section-head">
+        <span>From our beauty journal</span>
+        <h2>Latest Beauty Tips</h2>
+        <p>छोटे-छोटे सही कदम आपकी देखभाल की आदत को बेहतर बना सकते हैं।</p>
+      </div>
+      <div class="tips">
+        <article class="tip">
+          <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=900&q=85" alt="Skincare routine">
+          <div class="tip-body"><span class="tag">Skin Care</span><h3>Build a Simple Skin Care Routine</h3><p>क्लींजिंग, मॉइस्चराइजिंग और दिन में सनस्क्रीन जैसे बेसिक स्टेप्स से शुरुआत करें।</p><a class="read" href="#contact">Read More →</a></div>
+        </article>
+        <article class="tip">
+          <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=900&q=85" alt="Makeup brushes">
+          <div class="tip-body"><span class="tag">Makeup</span><h3>Everyday Makeup Essentials</h3><p>नेचुरल और फ्रेश लुक के लिए कम प्रोडक्ट्स के साथ एक आसान मेकअप रूटीन अपनाएं।</p><a class="read" href="#contact">Read More →</a></div>
+        </article>
+        <article class="tip">
+          <img src="https://images.unsplash.com/photo-1519692000543-7d5cd4f6b4c5?auto=format&fit=crop&w=900&q=85" alt="Healthy hair">
+          <div class="tip-body"><span class="tag">Hair Care</span><h3>Everyday Hair Care Habits</h3><p>अपने बालों के प्रकार के अनुसार देखभाल करें और बहुत ज्यादा हीट स्टाइलिंग से बचें।</p><a class="read" href="#contact">Read More →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter" id="contact">
+      <div class="eyebrow">Stay connected</div>
+      <h2>Let’s Make Self-Care Simple</h2>
+      <p>नए ब्यूटी टिप्स और अपडेट पाने के लिए हमसे जुड़े रहें।</p>
+      <form class="subscribe" id="subscribeForm">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div><h3>Makeup Skin Hair Care</h3><p>Beauty, skincare और haircare से जुड़ी आसान जानकारी — आपकी रोज़मर्रा की देखभाल के लिए।</p></div>
+      <div><h3>Quick Links</h3><a href="#home">Home</a><a href="#categories">Categories</a><a href="#about">About Us</a><a href="#tips">Beauty Tips</a></div>
+      <div><h3>Explore</h3><a href="#categories">Skin Care</a><a href="#categories">Makeup</a><a href="#categories">Hair Care</a><a href="#contact">Contact</a></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Makeup Skin Hair Care. All rights reserved.</div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('subscribeForm').addEventListener('submit', event => {
+      event.preventDefault();
+      alert('Thank you for subscribing! इस डेमो फॉर्म में आपका ईमेल सेव नहीं होता।');
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
